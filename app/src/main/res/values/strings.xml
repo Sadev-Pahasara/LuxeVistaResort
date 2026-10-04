@@ -1,0 +1,90 @@
+<resources>
+    <string name="app_name">LuxeVistaResort</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- activity_home.xml -->
+    <string name="home">Home</string>
+    <string name="history">History</string>
+    <string name="profile">Profile</string>
+
+    <!-- activity_login.xml -->
+    <string name="username">User Name</string>
+    <string name="enterusername">Enter username</string>
+    <string name="pw">Password</string>
+    <string name="login">LOGIN</string>
+
+    <!-- activity_register.xml -->
+    <string name="reg">Registration</string>
+    <string name="name">Name</string>
+    <string name="urname">Enter Your Name</string>
+    <string name="email">E-mail</string>
+    <string name="uremail">Enter Your Email</string>
+    <string name="mb">Mobile Number</string>
+    <string name="urmb">Enter Your Mobile Number</string>
+    <string name="usrname">User Name</string>
+    <string name="urusrname">Enter User Name</string>
+    <string name="urpw">Enter Password</string>
+    <string name="conpw">Confirm Password</string>
+    <string name="reg2">Register</string>
+
+    <!-- fragment_history.xml -->
+    <string name="wc">Welcome</string>
+    <string name="bill">Billing</string>
+    <string name="price">250$</string>
+    <string name="plus">+</string>
+    <string name="actvservices">Active Services</string>
+    <string name="list">List item</string>
+    <string name="checkout">Check-Out</string>
+
+    <!-- fragment_home.xml -->
+    <string name="qu">Experience Luxury &amp; Comfort</string>
+    <string name="para1">Discover a world of elegance and relaxation at LuxeVista Resort. From premium accommodations to curated leisure experiences, every detail is designed for your comfort.</string>
+    <string name="rbooking">Room Booking    ➤</string>
+
+    <!-- fragment_profile.xml -->
+    <string name="dob">Date Of Birth</string>
+    <string name="dob2">YYYY-MM-DD</string>
+    <string name="nic">National Identity Card</string>
+    <string name="nic2">Enter NIC</string>
+    <string name="add">Address</string>
+    <string name="add2">Enter Your Address</string>
+
+    <!-- fragment_profile.xml -->
+    <string name="ad">Add</string>
+    <string name="des">Description here...</string>
+    <string name="spa">Spa &amp; Wellness</string>
+
+    <string name="welcome">Welcome</string>
+    <string name="username_placeholder">User Name.............</string>
+    <string name="home_title">Experience Luxury &amp; Comfort</string>
+    <string name="home_desc">Discover a world of elegance and relaxation at LuxeVista Resort. From premium accommodations to curated leisure experiences, every detail is designed for your comfort and enjoyment.</string>
+    <string name="events">Events</string>
+    <string name="SnW">Eg: Spa &amp; Wellness</string>
+
+    <string name="Title">Title</string>
+    <string name="usd">$0</string>
+    <string name="desc">Description...</string>
+    <string name="key">Key Features</string>
+    <string name="feat">• Feature 1</string>
+    <string name="booking">BOOKINGS</string>
+    <string name="welcome2">WELCOME</string>
+    <string name="adminname">Admin Name......</string>
+    <string name="logo">Logo</string>
+    <string name="availableroom">Available rooms</string>
+    <string name="pnb">Pending\nBookings</string>
+    <string name="quick">Quick Actions</string>
+    <string name="manage">Manage Bookings</string>
+    <string name="manageservices">Manage Services</string>
+    <string name="managerooms">Manage Rooms</string>
+    <string name="OnE">Offers &amp; Events</string>
+    <string name="offers">Offers</string>
+    <string name="addoffers">Add New Offers</string>
+    <string name="addevents">Add New Event</string>
+
+    <string name="toggle">Toggle Availability</string>
+    <string name="delete">Delete Room</string>
+    <string name="edit">Edit Room</string>
+    <string name="usdp">$80</string>
+    <string name="standRoom">STANDARD ROOM</string>
+</resources>

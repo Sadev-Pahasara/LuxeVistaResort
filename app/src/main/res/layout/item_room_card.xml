@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="14dp"
+    app:cardElevation="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/imgRoom"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/room1"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgRoom"
+            android:layout_marginTop="8dp"
+            android:text="Family Room"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:textColor="#111827" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvName"
+            android:layout_marginTop="2dp"
+            android:text="From $300"
+            android:textSize="12sp"
+            android:textColor="#374151" />
+
+        <ImageButton
+            android:id="@+id/btnInfo"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/imgRoom"
+            android:layout_marginTop="6dp"
+            android:layout_marginLeft="6dp"
+            android:background="@drawable/bg_info_circle"
+            app:srcCompat="@drawable/ic_info"
+            app:tint="@color/b1"
+            android:contentDescription="Info" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

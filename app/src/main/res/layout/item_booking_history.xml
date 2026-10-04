@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_glass_panel_light"
+    android:padding="12dp"
+    android:layout_marginBottom="10dp">
+
+    <TextView
+        android:id="@+id/tvInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Booking info"
+        android:textSize="14sp"
+        android:textColor="#0F172A"
+        android:lineSpacingExtra="3dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCancelBooking"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Cancel Booking"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        app:cornerRadius="12dp"
+        app:backgroundTint="#EF4444"
+        android:textColor="@android:color/white"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"/>
+</LinearLayout>

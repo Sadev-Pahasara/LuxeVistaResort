@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="2dp"
+    app:cardBackgroundColor="#F5F5F5"
+    app:strokeColor="#22000000"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="14dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true">
+
+                <TextView
+                    android:id="@+id/tvGuestName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Visitor Name"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/insans"
+                    android:textColor="#0F172A" />
+
+                <TextView
+                    android:id="@+id/tvRoomType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Room Type"
+                    android:textSize="16sp"
+                    android:textColor="#475569" />
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="2026-03-10 → 2026-03-12"
+                    android:textSize="14sp"
+                    android:textColor="#64748B" />
+
+                <TextView
+                    android:id="@+id/tvStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="PENDING"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="#D97706" />
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnInfo"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="i"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="#0F172A"
+                app:backgroundTint="#E2E8F0"
+                app:cornerRadius="22dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutPendingButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAccept"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:text="Accept"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                app:backgroundTint="#16A34A"
+                app:cornerRadius="12dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnReject"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_marginStart="10dp"
+                android:text="Reject"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                app:backgroundTint="#DC2626"
+                app:cornerRadius="12dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

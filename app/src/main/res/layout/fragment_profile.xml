@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/login_bg"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wc"
+        android:textStyle="bold"
+        android:textSize="40sp"
+        android:textColor="@color/b1"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/usrname"
+        android:textSize="20sp"
+        android:textColor="@color/b1"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvWelcome"/>
+
+    <!-- Scrollable Area -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@id/tvUser"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/panelProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_login_panel"
+            android:padding="16dp"
+            android:orientation="vertical">
+
+            <!-- small profile circle -->
+            <View
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="end"
+                android:background="@drawable/bg_input_rounded"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                android:textColor="@color/b1"
+                android:layout_marginTop="10dp"/>
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_input_rounded"
+                android:hint="@string/urname"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textColor="@color/b1"
+                android:layout_marginTop="10dp"
+                android:textColorHint="@color/g1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/email"
+                android:textColor="@color/b1"
+                android:layout_marginTop="30dp"/>
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_input_rounded"
+                android:hint="@string/uremail"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/b1"
+                android:layout_marginTop="10dp"
+                android:textColorHint="@color/g1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mb"
+                android:textColor="@color/b1"
+                android:layout_marginTop="30dp"/>
+
+            <EditText
+                android:id="@+id/etMobile"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_input_rounded"
+                android:hint="@string/urmb"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:inputType="phone"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/b1"
+                android:textColorHint="@color/g1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dob"
+                android:textColor="@color/b1"
+                android:layout_marginTop="30dp"/>
+
+            <EditText
+                android:id="@+id/etDob"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_input_rounded"
+                android:hint="@string/dob2"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/b1"
+                android:textColorHint="@color/g1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nic"
+                android:textColor="@color/b1"
+                android:layout_marginTop="30dp"/>
+
+            <EditText
+                android:id="@+id/etNic"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_input_rounded"
+                android:hint="@string/nic2"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textColor="@color/b1"
+                android:layout_marginTop="10dp"
+                android:textColorHint="@color/g1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add"
+                android:textColor="@color/b1"
+                android:layout_marginTop="30dp"/>
+
+            <EditText
+                android:id="@+id/etAddress"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_input_rounded"
+                android:hint="@string/add2"
+                android:paddingStart="12dp"
+                android:layout_marginTop="10dp"
+                android:paddingEnd="12dp"
+                android:textColor="@color/b1"
+                android:textColorHint="@color/g1"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardBackgroundColor="#EDEDED"
+    app:cardCornerRadius="18dp"
+    app:cardElevation="2dp"
+    app:strokeColor="#55FFFFFF"
+    app:strokeWidth="1dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_glass_panel_light"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/ivOfferImage"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo_black" />
+
+        <TextView
+            android:id="@+id/tvOfferTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Weekend Escape"
+            android:textColor="@color/b1"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvOfferDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Special offer description"
+            android:textColor="@color/g1"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tvOfferDiscount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="20% OFF"
+            android:textColor="@color/b1"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvOfferExpiry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Expiry: 2026-04-01"
+            android:textColor="@color/g1"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvOfferStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="ACTIVE"
+            android:textColor="@android:color/holo_green_dark"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEditOffer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit"
+                android:fontFamily="@font/insans"
+                android:letterSpacing="0.05"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:background="@drawable/login_reg_botton"
+                android:backgroundTint="@null"
+                app:backgroundTint="@null"
+                app:cornerRadius="12dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnToggleOffer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Toggle"
+                android:fontFamily="@font/insans"
+                android:letterSpacing="0.05"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:background="@drawable/login_reg_botton"
+                android:backgroundTint="@null"
+                app:backgroundTint="@null"
+                app:cornerRadius="12dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDeleteOffer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Delete"
+                android:fontFamily="@font/insans"
+                android:letterSpacing="0.05"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:background="@drawable/login_reg_botton"
+                android:backgroundTint="@null"
+                app:backgroundTint="@null"
+                app:cornerRadius="12dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

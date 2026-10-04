@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="12dp"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/ivOfferPreview"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/logo_black" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPickOfferImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Pick Image" />
+
+        <EditText
+            android:id="@+id/etOfferTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Offer title"
+            android:inputType="textCapSentences" />
+
+        <EditText
+            android:id="@+id/etOfferDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="top|start"
+            android:hint="Description"
+            android:inputType="textMultiLine"
+            android:minLines="3" />
+
+        <EditText
+            android:id="@+id/etOfferDiscount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Discount text (e.g. 20% OFF)"
+            android:inputType="textCapSentences" />
+
+        <EditText
+            android:id="@+id/etOfferExpiryDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="Expiry date (YYYY-MM-DD)"
+            android:inputType="date" />
+
+    </LinearLayout>
+</ScrollView>

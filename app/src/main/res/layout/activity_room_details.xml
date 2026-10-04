@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/bgRoomDetail"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/mainbg"
+        android:scaleType="centerCrop"
+        android:contentDescription="@null"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="430dp"
+        android:layout_height="430dp"
+        android:src="@drawable/logo_black"
+        android:scaleType="fitCenter"
+        android:contentDescription="@null"
+        android:layout_marginTop="200dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ScrollView
+        android:id="@+id/scrollRoomDetail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        app:layout_constraintTop_toBottomOf="@id/imgLogo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/bg_glass_panel">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="22dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp">
+
+                <ImageView
+                    android:id="@+id/imgRoomDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@null"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/tvRoomTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Room Title"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="#111111"
+                android:layout_marginTop="22dp"/>
+
+            <TextView
+                android:id="@+id/tvRoomPriceDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="From $0"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#2E7D32"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/tvRoomDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Description..."
+                android:textSize="14sp"
+                android:textColor="#444444"
+                android:layout_marginTop="16dp"
+                android:lineSpacingExtra="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Key Features"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#111111"
+                android:layout_marginTop="18dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvKeyFeatures"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:layout_marginTop="10dp"/>
+
+            <Button
+                android:id="@+id/btnBookNow"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginBottom="40dp"
+                android:text="Book Now"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:background="@drawable/bg_button_glow"
+                android:backgroundTint="@null"
+                app:backgroundTint="@null"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

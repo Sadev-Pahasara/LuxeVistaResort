@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background -->
+    <ImageView
+        android:id="@+id/bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/login_bg"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Welcome -->
+    <TextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome"
+        android:textStyle="bold"
+        android:textSize="34sp"
+        android:textColor="#0F172A"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User Name.............."
+        android:textSize="14sp"
+        android:textColor="#0F172A"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvWelcome"/>
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/logo_black"
+        android:contentDescription="Logo"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="14dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Divider -->
+    <View
+        android:id="@+id/dividerTop"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#80FFFFFF"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/tvUser"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Scrollable Area (use NestedScrollView) -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollMain"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        app:layout_constraintTop_toBottomOf="@id/dividerTop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Glass Panel -->
+        <LinearLayout
+            android:id="@+id/panelGlass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/bg_glass_panel"
+            android:layout_margin="14dp">
+
+            <!-- Billing -->
+            <TextView
+                android:text="Billing"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="#0F172A"
+                android:layout_marginTop="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvBill"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:text="250$"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="#0F172A"
+                android:background="@drawable/bg_white_pill"/>
+
+            <!-- Active Services Header -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:text="Active"
+                        android:textStyle="bold"
+                        android:textSize="20sp"
+                        android:textColor="#0F172A"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:text="Add-On Services"
+                        android:textSize="12sp"
+                        android:textColor="#0F172A"
+                        android:alpha="0.7"
+                        android:layout_marginTop="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/btnAddService"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/bg_plus_circle"
+                    android:src="@drawable/ic_add"
+                    android:tint="@color/darkblue"
+                    android:contentDescription="Add"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/containerActiveAddons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp" />
+
+            <!-- Booking History -->
+            <TextView
+                android:text="BOOKING"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="#0F172A"
+                android:layout_marginTop="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="HISTORY"
+                android:textSize="12sp"
+                android:textColor="#0F172A"
+                android:alpha="0.7"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="-1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <!-- RecyclerView: make it wrap and disable nested scroll -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:padding="10dp"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:nestedScrollingEnabled="false"
+                android:background="@drawable/bg_glass_panel_light"/>
+
+            <!-- Checkout -->
+            <Button
+                android:id="@+id/btnCheckout"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="54dp"
+                android:text="Check-Out"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:fontFamily="@font/insans"
+                android:textColor="@android:color/white"
+                android:background="@drawable/bg_button_glow"
+                android:backgroundTint="@null"
+                app:backgroundTint="@null"
+                android:stateListAnimator="@null"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

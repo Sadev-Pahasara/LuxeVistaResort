@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/login_bg"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome"
+        android:textStyle="bold"
+        android:textSize="34sp"
+        android:textColor="#0F172A"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/username_placeholder"
+        android:textSize="14sp"
+        android:textColor="#0F172A"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvWelcome"/>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/tvUser"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/panelHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/bg_glass_panel"
+            android:layout_margin="14dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:background="@drawable/bg_carousel_round">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/carouselPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="18dp"
+                    android:paddingEnd="18dp"
+                    android:clipToPadding="false"
+                    android:clipChildren="false"/>
+
+                <View
+                    android:layout_width="24dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:background="@drawable/bg_fade_left"/>
+
+                <View
+                    android:layout_width="24dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:background="@drawable/bg_fade_right"/>
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/home_title"
+                android:textStyle="bold"
+                android:fontFamily="@font/signika"
+                android:textSize="28sp"
+                android:textColor="#0F172A"
+                android:layout_marginTop="14dp"/>
+
+            <TextView
+                android:id="@+id/tvDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/home_desc"
+                android:textSize="22sp"
+                android:fontFamily="@font/insans"
+                android:textColor="#334155"
+                android:layout_marginTop="10dp"
+                android:lineSpacingExtra="2dp"/>
+
+            <TextView
+                android:id="@+id/tvEvents"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Events"
+                android:textStyle="bold"
+                android:fontFamily="@font/signika"
+                android:textSize="28sp"
+                android:textColor="#0F172A"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="10dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvHomeEvents"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:overScrollMode="never"
+                android:nestedScrollingEnabled="false" />
+
+            <TextView
+                android:id="@+id/tvOffers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Offers"
+                android:textStyle="bold"
+                android:fontFamily="@font/signika"
+                android:textSize="28sp"
+                android:textColor="#0F172A"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="10dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvHomeOffers"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:overScrollMode="never"
+                android:nestedScrollingEnabled="false" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRoomBooking"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="@string/rbooking"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:fontFamily="@font/sansa"
+                android:textSize="28sp"
+                android:textColor="@android:color/white"
+                app:backgroundTint="#1DBD1D"
+                app:cornerRadius="12dp"
+                app:iconTint="@android:color/white"
+                android:layout_marginTop="20dp"
+                app:iconGravity="textEnd"
+                app:iconPadding="10dp"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainbg">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollBookingDetails"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:padding="14dp"
+        android:overScrollMode="never"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Customer Name -->
+            <TextView
+                android:id="@+id/tvCustomerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Customer Name"
+                android:textStyle="bold"
+                android:textSize="40sp"
+                android:textColor="#0F172A"
+                android:layout_marginBottom="20dp"/>
+
+            <!-- Grey Panel -->
+            <LinearLayout
+                android:id="@+id/panelBookingDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_panel_grey"
+                android:padding="12dp"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp">
+
+                <!-- Room Type -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Room Type"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="#0F172A"/>
+
+                <EditText
+                    android:id="@+id/etRoomType"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/bg_input_grey"
+                    android:paddingHorizontal="12dp"
+                    android:textColor="#0F172A"
+                    android:textColorHint="#64748B"
+                    android:hint="Enter room type"/>
+
+                <!-- Additional Services -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Additional Services"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="#0F172A"
+                    android:layout_marginTop="12dp"/>
+
+                <EditText
+                    android:id="@+id/etAdditionalServices"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/bg_input_grey"
+                    android:padding="12dp"
+                    android:gravity="top|start"
+                    android:textColor="#0F172A"
+                    android:textColorHint="#64748B"
+                    android:hint="Enter services"
+                    android:inputType="textMultiLine"/>
+
+                <!-- Row: Price + Discount -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Price"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:textColor="#0F172A"/>
+
+                        <EditText
+                            android:id="@+id/etPrice"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@drawable/bg_input_grey"
+                            android:paddingHorizontal="12dp"
+                            android:textColor="#0F172A"
+                            android:textColorHint="#64748B"
+                            android:hint="0"
+                            android:inputType="numberDecimal"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Discount"
+                            android:textStyle="bold"
+                            android:textSize="18sp"
+                            android:textColor="#0F172A"/>
+
+                        <EditText
+                            android:id="@+id/etDiscount"
+                            android:layout_width="match_parent"
+                            android:layout_height="44dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@drawable/bg_input_grey"
+                            android:paddingHorizontal="12dp"
+                            android:textColor="#0F172A"
+                            android:textColorHint="#64748B"
+                            android:hint="0 %"
+                            android:inputType="numberDecimal"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Total Price -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Price"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="#0F172A"
+                    android:layout_marginTop="12dp"/>
+
+                <EditText
+                    android:id="@+id/etTotalPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/bg_input_grey"
+                    android:paddingHorizontal="12dp"
+                    android:textColor="#0F172A"
+                    android:textColorHint="#64748B"
+                    android:hint="Total"
+                    android:enabled="false"/>
+
+                <!-- Payment Status -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Payment Status"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="#0F172A"/>
+
+                    <TextView
+                        android:id="@+id/tvPaymentStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="On-going/Paid"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="#16A34A"/>
+                </LinearLayout>
+
+                <!-- Buttons row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="8dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnSave"
+                        android:layout_width="0dp"
+                        android:layout_height="46dp"
+                        android:layout_weight="1"
+                        android:text="SAVE"
+                        android:textAllCaps="false"
+                        android:textStyle="bold"
+                        android:textColor="#0F172A"
+                        app:backgroundTint="#42D11A"
+                        app:cornerRadius="10dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:layout_marginEnd="10dp"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnDelete"
+                        android:layout_width="0dp"
+                        android:layout_height="46dp"
+                        android:layout_weight="1"
+                        android:text="DELETE"
+                        android:textAllCaps="false"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white"
+                        app:backgroundTint="#D32F2F"
+                        app:cornerRadius="10dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
